@@ -36,7 +36,7 @@ const contarCadena = (cadena = '', a = '') => {
         }
     });
     //Devolver el contador
-        console.log(`El caracter ${a} se repite ${contador} veces`);
+        console.info(`El caracter ${a} se repite ${contador} veces`);
 }
 
 contarCadena('hola mundo como te encuentras mundo', 'hola');
@@ -47,11 +47,7 @@ const palindromo = (cadena = '') => {
     // Convertir una cadena e array, invertirla y volver a convertirla
     let pr = cadena.split('').reverse().join('');
     //Si la cadena es igual a la invertida
-    if (cadena === pr) {
-        console.log('Es palindromo');
-    } else {
-        console.log('No es palindromo');
-    }
+    console.info( (cadena === pr) ? 'Es palindromo' : 'No es palindromo');
 }
 
 palindromo('ana');
@@ -59,10 +55,18 @@ palindromo('ana');
 //*8
 
 const patters = (cadena = '', a = '') => {
-   //*Convertir un array a un string
-    let va = cadena.split(" ").splice(0, );
-    // Quede aqui
-    return va;
+   while(cadena.includes(a)){
+       cadena = cadena.replace(a, '');
+   }
+   return cadena;
 }
 
 console.log(patters('xy1 xy2 xy3 xy4', 'xy'));
+
+// Con RegeExp
+
+const removeCharacter = (cadena = '', a = '') => {
+    return cadena.replace(new RegExp(a, 'ig'), '');
+}
+
+console.log(removeCharacter('xy1 xy2 xy3 xy4', 'xy'));
