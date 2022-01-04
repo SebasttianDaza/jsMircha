@@ -31,6 +31,8 @@ numberCapicua(2002);
 // * 11
 
 function factorial(n = number) {
+    if (n === undefined) { console.warn('No ingreso un numero') };
+    if (n === 0) { console.info('El factorial de 0 es 1') };
     //Inicia desde numero1
     let fact = 1;
     // Si i es menor o igual a n
@@ -42,3 +44,5 @@ function factorial(n = number) {
 }
 
 factorial(5);
+factorial(0);
+factorial();
