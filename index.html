@@ -15,7 +15,10 @@
     <script defer src="src/modules/modulosJS.js" type="module"></script> -->
     <!-- <script defer src="src/traversing.js"></script> -->
     <!-- <script defer src="src2/DOMCoolStyel.js"></script> -->
-    <script defer src="src2/manejadoresEvents.js"></script>
+    <!-- <script defer src="src2/manejadoresEvents.js"></script> -->
+
+    <!-- <script defer src="src2/stopPropagationPrevent.js"></script> -->
+    <script defer src="src2/BOM.js"></script>
 </head>
 <body>
     <h1>Hola mundo de JS</h1>
@@ -29,5 +32,41 @@
         <li>I like it<img src="https://placeimg.com/200/200/cat" alt=""></li>
         <li>I'm working<img src="https://placeimg.com/200/200/life" alt=""></li>
     </ul>
+    <div id="preven">
+        <div class="uno">
+            <div class="dos">
+                <div class="tres">
+                    <a href="https://youtube.com" rarget="_blank">Hola mundo YT</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    <style>
+        #preven {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+
+        .uno {
+            width: 80%;
+            height: 80%;
+            background: blue;
+        }
+
+        .dos {
+            width: 80%;
+            height: 80%;
+            background: green;
+        }
+
+        .tres {
+            width: 80%;
+            height: 80%;
+            background: yellow;
+        }
+    </style>
 </body>
 </html>
